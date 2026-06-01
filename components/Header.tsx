@@ -20,14 +20,14 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.png" alt="Vallejos Importadora logo" className="w-14 h-14 shrink-0 object-contain" />
+          <img src="/logo.png" alt="Vallejos Importadora logo" className="w-20 h-20 shrink-0 object-contain" />
           <div>
             <div className="text-white font-black text-xl tracking-[0.2em] leading-tight group-hover:text-electric-400 transition-colors">
               VALLEJOS
             </div>
             <div className="flex items-center gap-1.5 mt-0.5">
               <span className="h-px w-5 bg-gradient-to-r from-electric-500 to-electric-300 inline-block" />
-              <span className="text-electric-400 font-bold text-[10px] tracking-[0.4em] uppercase">Importadora</span>
+              <span className="text-electric-400 font-bold text-[10px] tracking-[0.4em] uppercase">Import</span>
               <span className="h-px w-5 bg-gradient-to-r from-electric-300 to-electric-500 inline-block" />
             </div>
             <div className="text-slate-500 text-[8px] tracking-[0.25em] font-medium mt-0.5 uppercase">Bolivia · Aduanas</div>
