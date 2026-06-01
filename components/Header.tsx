@@ -19,7 +19,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
-          <div className="relative w-14 h-14 shrink-0">
+          <div className="relative w-16 h-16 shrink-0">
             <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
               <defs>
                 <filter id="logoGlow">
@@ -62,10 +62,10 @@ export default function Header() {
             </svg>
           </div>
           <div>
-            <div className="text-white font-black text-xl tracking-wider leading-tight">
+            <div className="text-white font-black text-2xl tracking-wider leading-tight">
               FROTED
             </div>
-            <div className="text-electric-400 font-bold text-sm tracking-[0.3em] leading-tight">
+            <div className="text-electric-400 font-bold text-sm tracking-[0.4em] leading-tight">
               ADUANA
             </div>
           </div>
