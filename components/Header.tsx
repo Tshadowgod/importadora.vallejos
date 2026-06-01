@@ -18,38 +18,55 @@ export default function Header() {
       {/* Top bar */}
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3 group">
           <div className="w-14 h-14 shrink-0">
-            <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
               <defs>
-                <clipPath id="gc">
-                  <circle cx="28" cy="30" r="22" />
+                <clipPath id="gc2">
+                  <circle cx="28" cy="28" r="20" />
                 </clipPath>
+                <radialGradient id="globeGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.25"/>
+                  <stop offset="100%" stopColor="#0ea5e9" stopOpacity="0.05"/>
+                </radialGradient>
+                <filter id="logoGlow">
+                  <feGaussianBlur stdDeviation="1.2" result="blur"/>
+                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
               </defs>
-              {/* Globe */}
-              <circle cx="28" cy="30" r="22" stroke="white" strokeWidth="1.6" fill="rgba(255,255,255,0.04)" />
-              <g clipPath="url(#gc)" stroke="white" strokeWidth="0.85" fill="none" opacity="0.78">
-                <ellipse cx="28" cy="30" rx="7"  ry="22" />
-                <ellipse cx="28" cy="30" rx="16" ry="22" />
-                <ellipse cx="28" cy="30" rx="22" ry="7" />
-                <ellipse cx="28" cy="30" rx="22" ry="15" />
-                <line x1="6" y1="30" x2="50" y2="30" />
+
+              {/* Outer ring */}
+              <circle cx="28" cy="28" r="22" stroke="#38bdf8" strokeWidth="2" fill="url(#globeGlow)" filter="url(#logoGlow)"/>
+
+              {/* Globe grid lines */}
+              <g clipPath="url(#gc2)" stroke="#38bdf8" strokeWidth="0.9" fill="none" opacity="0.7">
+                <ellipse cx="28" cy="28" rx="8" ry="20"/>
+                <ellipse cx="28" cy="28" rx="16" ry="20"/>
+                <ellipse cx="28" cy="28" rx="20" ry="8"/>
+                <ellipse cx="28" cy="28" rx="20" ry="15"/>
+                <line x1="8" y1="28" x2="48" y2="28"/>
               </g>
-              {/* Swoosh arrow */}
-              <path d="M 9 49 Q -1 28 13 14 Q 20 6 33 3"
-                stroke="white" strokeWidth="3" strokeLinecap="round" fill="none" />
-              <polygon points="27,0 35,3 28,9" fill="white" />
+
+              {/* Accent ring */}
+              <circle cx="28" cy="28" r="22" stroke="#0ea5e9" strokeWidth="0.5" strokeDasharray="4 3" opacity="0.5"/>
+
+              {/* Arrow pointing up-right (import motion) */}
+              <g filter="url(#logoGlow)">
+                <path d="M 38 10 L 52 10 L 52 24" stroke="#38bdf8" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                <line x1="28" y1="20" x2="51" y2="11" stroke="#38bdf8" strokeWidth="2.5" strokeLinecap="round"/>
+              </g>
             </svg>
           </div>
           <div>
-            <div className="text-white font-black text-xl tracking-widest leading-tight">
+            <div className="text-white font-black text-xl tracking-[0.2em] leading-tight group-hover:text-electric-400 transition-colors">
               VALLEJOS
             </div>
             <div className="flex items-center gap-1.5 mt-0.5">
-              <span className="h-px w-4 bg-electric-400 inline-block" />
-              <span className="text-electric-400 font-bold text-xs tracking-[0.35em]">IMPORT</span>
-              <span className="h-px w-4 bg-electric-400 inline-block" />
+              <span className="h-px w-5 bg-gradient-to-r from-electric-500 to-electric-300 inline-block" />
+              <span className="text-electric-400 font-bold text-[10px] tracking-[0.4em] uppercase">Importadora</span>
+              <span className="h-px w-5 bg-gradient-to-r from-electric-300 to-electric-500 inline-block" />
             </div>
+            <div className="text-slate-500 text-[8px] tracking-[0.25em] font-medium mt-0.5 uppercase">Bolivia · Aduanas</div>
           </div>
         </Link>
 
