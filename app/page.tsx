@@ -11,10 +11,12 @@ export default function HomePage() {
       <Hero />
       <Services />
 
-      {/* About section */}
+      {/* Nosotros + Misión, Visión y Valores */}
       <section id="nosotros" className="py-24 bg-hero-gradient">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+          {/* Quiénes somos */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
             <div>
               <div className="inline-flex items-center gap-2 bg-electric-500/10 border border-electric-500/20 rounded-full px-4 py-1.5 mb-6">
                 <span className="text-electric-400 text-sm font-semibold tracking-wide">QUIÉNES SOMOS</span>
@@ -55,22 +57,18 @@ export default function HomePage() {
               ))}
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Misión, Visión y Valores */}
-      <section className="py-24 bg-navy-950">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-electric-500/10 border border-electric-500/20 rounded-full px-4 py-1.5 mb-4">
-              <span className="text-electric-400 text-sm font-semibold tracking-wide">NUESTRA EMPRESA</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-black text-white">
+          {/* Divisor */}
+          <div className="border-t border-electric-500/10 mb-20" />
+
+          {/* Misión, Visión y Valores */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-black text-white">
               MISIÓN, VISIÓN <span className="text-electric-400">Y VALORES</span>
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Misión */}
             <div className="card-dark rounded-2xl p-8 border border-electric-500/10 hover:border-electric-500/30 transition-colors">
               <div className="w-12 h-12 bg-electric-500/10 rounded-xl flex items-center justify-center mb-5">
@@ -122,6 +120,7 @@ export default function HomePage() {
               </ul>
             </div>
           </div>
+
         </div>
       </section>
 
