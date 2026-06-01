@@ -27,9 +27,9 @@ export default function Hero() {
       <div className="absolute right-[-40px] top-1/2 -translate-y-[50%] w-[58%] max-w-[780px] hidden lg:block pointer-events-none animate-float">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/car-hero.jpeg"
+          src="/car-hero.png"
           alt="Toyota Land Cruiser wireframe"
-          className="w-full h-auto object-contain drop-shadow-[0_0_40px_rgba(56,189,248,0.4)]"
+          className="w-full h-auto object-contain"
         />
       </div>
 
