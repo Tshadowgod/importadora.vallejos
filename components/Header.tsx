@@ -19,44 +19,8 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-14 h-14 shrink-0">
-            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-              <defs>
-                <clipPath id="gc2">
-                  <circle cx="28" cy="28" r="20" />
-                </clipPath>
-                <radialGradient id="globeGlow" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.25"/>
-                  <stop offset="100%" stopColor="#0ea5e9" stopOpacity="0.05"/>
-                </radialGradient>
-                <filter id="logoGlow">
-                  <feGaussianBlur stdDeviation="1.2" result="blur"/>
-                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                </filter>
-              </defs>
-
-              {/* Outer ring */}
-              <circle cx="28" cy="28" r="22" stroke="#38bdf8" strokeWidth="2" fill="url(#globeGlow)" filter="url(#logoGlow)"/>
-
-              {/* Globe grid lines */}
-              <g clipPath="url(#gc2)" stroke="#38bdf8" strokeWidth="0.9" fill="none" opacity="0.7">
-                <ellipse cx="28" cy="28" rx="8" ry="20"/>
-                <ellipse cx="28" cy="28" rx="16" ry="20"/>
-                <ellipse cx="28" cy="28" rx="20" ry="8"/>
-                <ellipse cx="28" cy="28" rx="20" ry="15"/>
-                <line x1="8" y1="28" x2="48" y2="28"/>
-              </g>
-
-              {/* Accent ring */}
-              <circle cx="28" cy="28" r="22" stroke="#0ea5e9" strokeWidth="0.5" strokeDasharray="4 3" opacity="0.5"/>
-
-              {/* Arrow pointing up-right (import motion) */}
-              <g filter="url(#logoGlow)">
-                <path d="M 38 10 L 52 10 L 52 24" stroke="#38bdf8" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-                <line x1="28" y1="20" x2="51" y2="11" stroke="#38bdf8" strokeWidth="2.5" strokeLinecap="round"/>
-              </g>
-            </svg>
-          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo.png" alt="Vallejos Importadora logo" className="w-14 h-14 shrink-0 object-contain" />
           <div>
             <div className="text-white font-black text-xl tracking-[0.2em] leading-tight group-hover:text-electric-400 transition-colors">
               VALLEJOS
