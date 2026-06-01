@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
-import { getDb } from "@/lib/db";
+import { getDb, ensureTable } from "@/lib/db";
 import { quotations } from "@/lib/schema";
 import { calculateImportCost } from "@/lib/calculator";
 
@@ -22,6 +22,8 @@ export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
     const data = schema.parse(body);
+
+    await ensureTable();
 
     const calc = calculateImportCost({
       vehicleValueUsd: data.vehicleValueUsd,

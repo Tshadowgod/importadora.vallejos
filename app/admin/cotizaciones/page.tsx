@@ -1,12 +1,14 @@
-import { getDb } from "@/lib/db";
+import { getDb, ensureTable } from "@/lib/db";
 import { quotations } from "@/lib/schema";
 import { desc } from "drizzle-orm";
 
 async function getCotizaciones() {
   try {
+    await ensureTable();
     const db = getDb();
     return await db.select().from(quotations).orderBy(desc(quotations.createdAt));
-  } catch {
+  } catch (e) {
+    console.error("Admin getCotizaciones error:", e);
     return null;
   }
 }
