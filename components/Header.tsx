@@ -22,8 +22,11 @@ export default function Header() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/logo.png" alt="Vallejos Importadora logo" className="w-28 h-28 shrink-0 object-contain" />
           <div>
-            <div className="text-white font-black text-xl tracking-[0.2em] leading-tight group-hover:text-electric-400 transition-colors">
-              VALLEJOS <span className="text-electric-400">IMPORT</span>
+            <div className="text-white font-black text-xl tracking-[0.2em] leading-tight">
+              VALLEJOS
+            </div>
+            <div className="text-electric-400 font-black text-xl tracking-[0.2em] leading-tight">
+              IMPORT
             </div>
             <div className="text-slate-500 text-[8px] tracking-[0.25em] font-medium mt-1 uppercase">Bolivia · Aduanas</div>
           </div>
