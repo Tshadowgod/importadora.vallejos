@@ -3,7 +3,6 @@ import { z } from "zod";
 import { db } from "@/lib/db";
 import { quotations } from "@/lib/schema";
 import { calculateImportCost } from "@/lib/calculator";
-import { sendWhatsAppNotification } from "@/lib/whatsapp";
 
 const schema = z.object({
   customerName: z.string().min(2),
@@ -52,21 +51,6 @@ export async function POST(req: NextRequest) {
         notes: data.notes || null,
       })
       .returning();
-
-    await sendWhatsAppNotification({
-      customerName: data.customerName,
-      customerPhone: data.customerPhone,
-      vehicleMake: data.vehicleMake,
-      vehicleModel: data.vehicleModel,
-      vehicleYear: data.vehicleYear,
-      originCountry: data.originCountry,
-      vehicleValueUsd: data.vehicleValueUsd,
-      totalUsd: calc.totalUsd,
-      totalBob: calc.totalBob,
-      quotationId: inserted.id,
-    }).catch((err) => {
-      console.error("WhatsApp notification failed:", err);
-    });
 
     return NextResponse.json({
       id: inserted.id,
