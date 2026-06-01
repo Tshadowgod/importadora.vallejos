@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import QuotationForm from "@/components/QuotationForm";
 
 export const metadata = {
-  title: "Cotizar Importación | FROTED ADUANA",
+  title: "Cotizar Importación | Importadora Vallejos",
   description: "Calcula el costo estimado de importación de tu vehículo a Bolivia incluyendo todos los aranceles e impuestos.",
 };
 

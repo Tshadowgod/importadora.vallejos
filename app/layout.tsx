@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "FROTED ADUANA | Importación de Vehículos",
+  title: "Importadora Vallejos | Importación de Vehículos en Bolivia",
   description:
     "Cotiza el costo de importación de tu vehículo de forma rápida y confiable. Servicios aduaneros profesionales en Bolivia.",
-  keywords: "importación vehículos, aduana Bolivia, cotización importación, trámites aduaneros",
+  keywords: "importación vehículos, aduana Bolivia, cotización importación, Importadora Vallejos, trámites aduaneros",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

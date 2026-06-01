@@ -8,31 +8,33 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 shrink-0">
+              <div className="w-12 h-12 shrink-0">
                 <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-                  <path d="M28 3 L50 15.5 L50 40.5 L28 53 L6 40.5 L6 15.5 Z" fill="#0d1530" stroke="#0ea5e9" strokeWidth="1.5" />
-                  <g stroke="#38bdf8" strokeWidth="1.2" fill="none">
-                    <path d="M10 36 L10 28 L15 20 L28 18 L38 18 L44 22 L46 28 L46 36 Z" />
-                    <path d="M15 20 L19 15 L36 15 L38 18" strokeDasharray="2 1.5" />
-                    <path d="M16 28 L19 20 L28 19 L28 28" strokeDasharray="2 1.5" strokeWidth="0.9" />
-                    <path d="M30 19 L36 18 L38 22 L30 28 L30 19" strokeDasharray="2 1.5" strokeWidth="0.9" />
-                    <line x1="16" y1="28" x2="44" y2="28" strokeWidth="0.8" opacity="0.7" />
-                    <path d="M10 36 L12 36 Q13 30 19 30 Q25 30 26 36 L34 36 Q35 30 41 30 Q47 30 46 36" />
+                  <defs><clipPath id="gcf"><circle cx="28" cy="30" r="22" /></clipPath></defs>
+                  <circle cx="28" cy="30" r="22" stroke="white" strokeWidth="1.6" fill="rgba(255,255,255,0.04)" />
+                  <g clipPath="url(#gcf)" stroke="white" strokeWidth="0.85" fill="none" opacity="0.78">
+                    <ellipse cx="28" cy="30" rx="7"  ry="22" />
+                    <ellipse cx="28" cy="30" rx="16" ry="22" />
+                    <ellipse cx="28" cy="30" rx="22" ry="7" />
+                    <ellipse cx="28" cy="30" rx="22" ry="15" />
+                    <line x1="6" y1="30" x2="50" y2="30" />
                   </g>
-                  <circle cx="19" cy="36" r="5.5" stroke="#38bdf8" strokeWidth="1.2" />
-                  <circle cx="19" cy="36" r="1.2" fill="#38bdf8" opacity="0.8" />
-                  <circle cx="41" cy="36" r="5.5" stroke="#38bdf8" strokeWidth="1.2" />
-                  <circle cx="41" cy="36" r="1.2" fill="#38bdf8" opacity="0.8" />
+                  <path d="M 9 49 Q -1 28 13 14 Q 20 6 33 3" stroke="white" strokeWidth="3" strokeLinecap="round" fill="none" />
+                  <polygon points="27,0 35,3 28,9" fill="white" />
                 </svg>
               </div>
               <div>
-                <div className="text-white font-black text-lg leading-tight">FROTED ADUANA</div>
-                <div className="text-electric-400 text-xs tracking-widest">IMPORTACIÓN DE VEHÍCULOS</div>
+                <div className="text-white font-black text-lg leading-tight tracking-widest">VALLEJOS</div>
+                <div className="flex items-center gap-1.5 mt-0.5">
+                  <span className="h-px w-3 bg-electric-400 inline-block" />
+                  <span className="text-electric-400 text-xs tracking-[0.3em] font-bold">IMPORT</span>
+                  <span className="h-px w-3 bg-electric-400 inline-block" />
+                </div>
               </div>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Servicios aduaneros profesionales en Bolivia. Importamos tu vehículo
-              con transparencia, seguridad y los mejores precios del mercado.
+              Importadora Vallejos — servicios aduaneros profesionales en Bolivia.
+              Importamos tu vehículo con transparencia, seguridad y los mejores precios del mercado.
             </p>
           </div>
 
@@ -85,7 +87,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 pt-6 border-t border-electric-500/10 text-center text-slate-500 text-sm">
-          © {new Date().getFullYear()} FROTED ADUANA. Todos los derechos reservados.
+          © {new Date().getFullYear()} Importadora Vallejos. Todos los derechos reservados.
           <span className="mx-2 text-electric-500/30">|</span>
           Las cotizaciones son estimadas y no constituyen un compromiso de precio definitivo.
         </div>

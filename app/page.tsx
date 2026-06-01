@@ -22,12 +22,12 @@ export default function HomePage() {
               <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
                 EXPERTOS EN
                 <br />
-                <span className="text-electric-400">ADUANA BOLIVIANA</span>
+                <span className="text-electric-400">IMPORTACIÓN A BOLIVIA</span>
               </h2>
               <p className="text-slate-400 text-lg leading-relaxed mb-6">
-                Con más de 15 años de experiencia en trámites aduaneros, hemos importado
-                más de 500 vehículos para clientes en toda Bolivia. Conocemos cada
-                detalle de la normativa vigente.
+                Importadora Vallejos cuenta con más de 15 años de experiencia en trámites
+                aduaneros. Hemos importado más de 500 vehículos para clientes en toda Bolivia.
+                Conocemos cada detalle de la normativa vigente.
               </p>
               <p className="text-slate-400 leading-relaxed mb-8">
                 Trabajamos con total transparencia: te mostramos cada impuesto y arancel

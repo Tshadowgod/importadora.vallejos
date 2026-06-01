@@ -19,54 +19,36 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
-          <div className="relative w-16 h-16 shrink-0">
+          <div className="w-14 h-14 shrink-0">
             <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
               <defs>
-                <filter id="logoGlow">
-                  <feGaussianBlur stdDeviation="1.5" result="coloredBlur" />
-                  <feMerge><feMergeNode in="coloredBlur" /><feMergeNode in="SourceGraphic" /></feMerge>
-                </filter>
+                <clipPath id="gc">
+                  <circle cx="28" cy="30" r="22" />
+                </clipPath>
               </defs>
-              {/* Hexagon background */}
-              <path d="M28 3 L50 15.5 L50 40.5 L28 53 L6 40.5 L6 15.5 Z"
-                fill="url(#hexGrad)" stroke="#0ea5e9" strokeWidth="1.5" />
-              <defs>
-                <linearGradient id="hexGrad" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stopColor="#0d1530" />
-                  <stop offset="100%" stopColor="#0a1a3a" />
-                </linearGradient>
-              </defs>
-              {/* Car wireframe inside hex */}
-              <g filter="url(#logoGlow)" stroke="#38bdf8" strokeWidth="1.2" fill="none">
-                {/* Body */}
-                <path d="M10 36 L10 28 L15 20 L28 18 L38 18 L44 22 L46 28 L46 36 Z" />
-                {/* Roof */}
-                <path d="M15 20 L19 15 L36 15 L38 18" strokeDasharray="2 1.5" />
-                {/* Windows */}
-                <path d="M16 28 L19 20 L28 19 L28 28" strokeDasharray="2 1.5" strokeWidth="0.9" />
-                <path d="M30 19 L36 18 L38 22 L30 28 L30 19" strokeDasharray="2 1.5" strokeWidth="0.9" />
-                {/* Window sill */}
-                <line x1="16" y1="28" x2="44" y2="28" strokeWidth="0.8" opacity="0.7" />
-                {/* Wheel arches */}
-                <path d="M10 36 L12 36 Q13 30 19 30 Q25 30 26 36 L34 36 Q35 30 41 30 Q47 30 46 36" />
+              {/* Globe */}
+              <circle cx="28" cy="30" r="22" stroke="white" strokeWidth="1.6" fill="rgba(255,255,255,0.04)" />
+              <g clipPath="url(#gc)" stroke="white" strokeWidth="0.85" fill="none" opacity="0.78">
+                <ellipse cx="28" cy="30" rx="7"  ry="22" />
+                <ellipse cx="28" cy="30" rx="16" ry="22" />
+                <ellipse cx="28" cy="30" rx="22" ry="7" />
+                <ellipse cx="28" cy="30" rx="22" ry="15" />
+                <line x1="6" y1="30" x2="50" y2="30" />
               </g>
-              {/* Wheels */}
-              <g filter="url(#logoGlow)">
-                <circle cx="19" cy="36" r="5.5" stroke="#38bdf8" strokeWidth="1.2" />
-                <circle cx="19" cy="36" r="3" stroke="#38bdf8" strokeWidth="0.8" strokeDasharray="2 1" />
-                <circle cx="19" cy="36" r="1.2" fill="#38bdf8" opacity="0.8" />
-                <circle cx="41" cy="36" r="5.5" stroke="#38bdf8" strokeWidth="1.2" />
-                <circle cx="41" cy="36" r="3" stroke="#38bdf8" strokeWidth="0.8" strokeDasharray="2 1" />
-                <circle cx="41" cy="36" r="1.2" fill="#38bdf8" opacity="0.8" />
-              </g>
+              {/* Swoosh arrow */}
+              <path d="M 9 49 Q -1 28 13 14 Q 20 6 33 3"
+                stroke="white" strokeWidth="3" strokeLinecap="round" fill="none" />
+              <polygon points="27,0 35,3 28,9" fill="white" />
             </svg>
           </div>
           <div>
-            <div className="text-white font-black text-2xl tracking-wider leading-tight">
-              FROTED
+            <div className="text-white font-black text-xl tracking-widest leading-tight">
+              VALLEJOS
             </div>
-            <div className="text-electric-400 font-bold text-sm tracking-[0.4em] leading-tight">
-              ADUANA
+            <div className="flex items-center gap-1.5 mt-0.5">
+              <span className="h-px w-4 bg-electric-400 inline-block" />
+              <span className="text-electric-400 font-bold text-xs tracking-[0.35em]">IMPORT</span>
+              <span className="h-px w-4 bg-electric-400 inline-block" />
             </div>
           </div>
         </Link>
