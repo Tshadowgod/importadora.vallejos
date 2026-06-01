@@ -20,7 +20,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.png" alt="Vallejos Importadora logo" className="w-24 h-24 shrink-0 object-contain" />
+          <img src="/logo.png" alt="Vallejos Importadora logo" className="w-28 h-28 shrink-0 object-contain" />
           <div>
             <div className="text-white font-black text-xl tracking-[0.2em] leading-tight group-hover:text-electric-400 transition-colors">
               VALLEJOS <span className="text-electric-400">IMPORT</span>
