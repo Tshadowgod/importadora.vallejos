@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
-import { db } from "@/lib/db";
+import { getDb } from "@/lib/db";
 import { quotations } from "@/lib/schema";
 import { calculateImportCost } from "@/lib/calculator";
 
@@ -31,6 +31,7 @@ export async function POST(req: NextRequest) {
       originCountry: data.originCountry,
     });
 
+    const db = getDb();
     const [inserted] = await db
       .insert(quotations)
       .values({
