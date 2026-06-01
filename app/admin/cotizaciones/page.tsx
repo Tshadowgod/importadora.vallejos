@@ -1,6 +1,7 @@
 import { getDb, ensureTable } from "@/lib/db";
 import { quotations } from "@/lib/schema";
 import { desc } from "drizzle-orm";
+import { CotizacionActions } from "./CotizacionActions";
 
 async function getCotizaciones() {
   try {
@@ -103,6 +104,7 @@ export default async function AdminCotizacionesPage() {
                     {q.notes && (
                       <p className="text-slate-500 text-xs mt-1 italic">"{q.notes}"</p>
                     )}
+                    <CotizacionActions id={q.id} status={q.status} />
                   </div>
 
                   {/* Right: prices */}
