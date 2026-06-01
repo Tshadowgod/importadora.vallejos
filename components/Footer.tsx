@@ -8,21 +8,8 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 shrink-0">
-                <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-                  <defs><clipPath id="gcf"><circle cx="28" cy="30" r="22" /></clipPath></defs>
-                  <circle cx="28" cy="30" r="22" stroke="white" strokeWidth="1.6" fill="rgba(255,255,255,0.04)" />
-                  <g clipPath="url(#gcf)" stroke="white" strokeWidth="0.85" fill="none" opacity="0.78">
-                    <ellipse cx="28" cy="30" rx="7"  ry="22" />
-                    <ellipse cx="28" cy="30" rx="16" ry="22" />
-                    <ellipse cx="28" cy="30" rx="22" ry="7" />
-                    <ellipse cx="28" cy="30" rx="22" ry="15" />
-                    <line x1="6" y1="30" x2="50" y2="30" />
-                  </g>
-                  <path d="M 9 49 Q -1 28 13 14 Q 20 6 33 3" stroke="white" strokeWidth="3" strokeLinecap="round" fill="none" />
-                  <polygon points="27,0 35,3 28,9" fill="white" />
-                </svg>
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo.png" alt="Vallejos Import logo" className="w-16 h-16 shrink-0 object-contain" />
               <div>
                 <div className="text-white font-black text-lg leading-tight tracking-widest">VALLEJOS</div>
                 <div className="flex items-center gap-1.5 mt-0.5">
