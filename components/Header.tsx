@@ -19,10 +19,47 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
-          <div className="relative">
-            <div className="w-12 h-12 bg-gradient-to-br from-electric-500 to-electric-600 rounded-lg flex items-center justify-center shadow-blue-glow-sm">
-              <span className="text-white font-black text-lg leading-none">FA</span>
-            </div>
+          <div className="relative w-14 h-14 shrink-0">
+            <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+              <defs>
+                <filter id="logoGlow">
+                  <feGaussianBlur stdDeviation="1.5" result="coloredBlur" />
+                  <feMerge><feMergeNode in="coloredBlur" /><feMergeNode in="SourceGraphic" /></feMerge>
+                </filter>
+              </defs>
+              {/* Hexagon background */}
+              <path d="M28 3 L50 15.5 L50 40.5 L28 53 L6 40.5 L6 15.5 Z"
+                fill="url(#hexGrad)" stroke="#0ea5e9" strokeWidth="1.5" />
+              <defs>
+                <linearGradient id="hexGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stopColor="#0d1530" />
+                  <stop offset="100%" stopColor="#0a1a3a" />
+                </linearGradient>
+              </defs>
+              {/* Car wireframe inside hex */}
+              <g filter="url(#logoGlow)" stroke="#38bdf8" strokeWidth="1.2" fill="none">
+                {/* Body */}
+                <path d="M10 36 L10 28 L15 20 L28 18 L38 18 L44 22 L46 28 L46 36 Z" />
+                {/* Roof */}
+                <path d="M15 20 L19 15 L36 15 L38 18" strokeDasharray="2 1.5" />
+                {/* Windows */}
+                <path d="M16 28 L19 20 L28 19 L28 28" strokeDasharray="2 1.5" strokeWidth="0.9" />
+                <path d="M30 19 L36 18 L38 22 L30 28 L30 19" strokeDasharray="2 1.5" strokeWidth="0.9" />
+                {/* Window sill */}
+                <line x1="16" y1="28" x2="44" y2="28" strokeWidth="0.8" opacity="0.7" />
+                {/* Wheel arches */}
+                <path d="M10 36 L12 36 Q13 30 19 30 Q25 30 26 36 L34 36 Q35 30 41 30 Q47 30 46 36" />
+              </g>
+              {/* Wheels */}
+              <g filter="url(#logoGlow)">
+                <circle cx="19" cy="36" r="5.5" stroke="#38bdf8" strokeWidth="1.2" />
+                <circle cx="19" cy="36" r="3" stroke="#38bdf8" strokeWidth="0.8" strokeDasharray="2 1" />
+                <circle cx="19" cy="36" r="1.2" fill="#38bdf8" opacity="0.8" />
+                <circle cx="41" cy="36" r="5.5" stroke="#38bdf8" strokeWidth="1.2" />
+                <circle cx="41" cy="36" r="3" stroke="#38bdf8" strokeWidth="0.8" strokeDasharray="2 1" />
+                <circle cx="41" cy="36" r="1.2" fill="#38bdf8" opacity="0.8" />
+              </g>
+            </svg>
           </div>
           <div>
             <div className="text-white font-black text-xl tracking-wider leading-tight">

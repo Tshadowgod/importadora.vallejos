@@ -8,8 +8,22 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-electric-500 to-electric-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-black text-sm">FA</span>
+              <div className="w-10 h-10 shrink-0">
+                <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+                  <path d="M28 3 L50 15.5 L50 40.5 L28 53 L6 40.5 L6 15.5 Z" fill="#0d1530" stroke="#0ea5e9" strokeWidth="1.5" />
+                  <g stroke="#38bdf8" strokeWidth="1.2" fill="none">
+                    <path d="M10 36 L10 28 L15 20 L28 18 L38 18 L44 22 L46 28 L46 36 Z" />
+                    <path d="M15 20 L19 15 L36 15 L38 18" strokeDasharray="2 1.5" />
+                    <path d="M16 28 L19 20 L28 19 L28 28" strokeDasharray="2 1.5" strokeWidth="0.9" />
+                    <path d="M30 19 L36 18 L38 22 L30 28 L30 19" strokeDasharray="2 1.5" strokeWidth="0.9" />
+                    <line x1="16" y1="28" x2="44" y2="28" strokeWidth="0.8" opacity="0.7" />
+                    <path d="M10 36 L12 36 Q13 30 19 30 Q25 30 26 36 L34 36 Q35 30 41 30 Q47 30 46 36" />
+                  </g>
+                  <circle cx="19" cy="36" r="5.5" stroke="#38bdf8" strokeWidth="1.2" />
+                  <circle cx="19" cy="36" r="1.2" fill="#38bdf8" opacity="0.8" />
+                  <circle cx="41" cy="36" r="5.5" stroke="#38bdf8" strokeWidth="1.2" />
+                  <circle cx="41" cy="36" r="1.2" fill="#38bdf8" opacity="0.8" />
+                </svg>
               </div>
               <div>
                 <div className="text-white font-black text-lg leading-tight">FROTED ADUANA</div>
